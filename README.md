@@ -7,9 +7,10 @@
 - AWS_REGION=AWS_REGION
 - VERIFIED_EMAIL=VERIFIED_EMAIL
 
-## 2. Start the project
+## 2. Install & Start the project
 
 ```
+npm install
 npm run start
 ```
 
@@ -18,3 +19,14 @@ npm run start
 ```
 npm run package
 ```
+
+## 4.csv format
+
+| email        |
+| ------------ |
+| abc@test.com |
+| bbc@test.com |
+
+## Project Display
+
+![Alt Text](README_info/Intro1.png)

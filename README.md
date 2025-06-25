@@ -1,3 +1,9 @@
+## Project Display
+
+![Alt Text](README_info/Intro1.png)
+
+![Alt Text](README_info/Intro2.png)
+
 # How to use ?
 
 ## 1. Replace your AWS SES INFO to .env file
@@ -26,9 +32,3 @@ npm run package
 | ------------ |
 | abc@test.com |
 | bbc@test.com |
-
-## Project Display
-
-![Alt Text](README_info/Intro1.png)
-
-![Alt Text](README_info/Intro2.png)

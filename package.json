@@ -1,0 +1,22 @@
+{
+  "name": "mailer-sender",
+  "version": "1.0.0",
+  "description": "A mail sender application using Electron and AWS SES",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . MailerSender --platform=win32 --arch=x64 --out=dist"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1451.0",
+    "bootstrap": "^5.3.0-alpha1",
+    "dotenv": "^16.4.7",
+    "fast-csv": "^4.3.6"
+  },
+  "devDependencies": {
+    "electron": "^25.3.1",
+    "electron-packager": "^17.1.0"
+  }
+}

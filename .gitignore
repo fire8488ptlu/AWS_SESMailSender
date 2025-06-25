@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Electron build output
+dist/
+build/
+out/
+
+# Logs
+*.log
+*.log.*
+logs/
+debug.log
+error.log
+
+# Environment variables
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# Electron Packager files
+MailerSender-win32-x64/
+MailerSender-darwin-x64/
+MailerSender-linux-x64/
+
+# Temporary files
+*.temp
+*.tmp
+*.bak
+*.swp
+
+# Compiled files
+*.lock
+*.db
+
+# MacOS specific
+.DS_Store
+
+# Windows specific
+desktop.ini

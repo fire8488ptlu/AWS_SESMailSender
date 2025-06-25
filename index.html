@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS_Mailer Sender</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>AWS Email發送器</h1>
+
+      <!-- Form for Email Details -->
+      <form id="emailForm">
+        <!-- Subject Title -->
+        <div class="mb-3">
+          <label for="subjectTitle" class="form-label">Email標題</label>
+          <input type="text" id="subjectTitle" class="form-control" required />
+        </div>
+
+        <!-- Content Type -->
+        <div class="mb-3">
+          <label class="form-label">內容類型</label>
+          <div>
+            <input
+              type="radio"
+              id="textOption"
+              name="contentType"
+              value="text"
+              checked
+            />
+            <label for="textOption">文字</label>
+            <input
+              type="radio"
+              id="htmlOption"
+              name="contentType"
+              value="html"
+            />
+            <label for="htmlOption">HTML模板</label>
+          </div>
+        </div>
+
+        <!-- Plain Text Input -->
+        <div id="textMessageDiv" class="mb-3">
+          <label for="textMessage" class="form-label">Email內容</label>
+          <textarea id="textMessage" class="form-control" rows="4"></textarea>
+        </div>
+
+        <!-- HTML File Upload -->
+        <div id="htmlFileDiv" class="mb-3" style="display: none">
+          <label for="htmlContentFile" class="form-label">請上傳HTML模板</label>
+          <input
+            type="file"
+            id="htmlContentFile"
+            class="form-control"
+            accept=".html"
+          />
+        </div>
+
+        <!-- Recipient Email -->
+        <div class="mb-3">
+          <label class="form-label">收件人Email</label>
+          <div>
+            <input
+              type="radio"
+              id="recipientTextOption"
+              name="recipientInputType"
+              value="text"
+              checked
+            />
+            <label for="recipientTextOption">文字收件人Email</label>
+            <input
+              type="radio"
+              id="recipientCsvOption"
+              name="recipientInputType"
+              value="csv"
+            />
+            <label for="recipientCsvOption">上傳收件人CSV</label>
+          </div>
+        </div>
+
+        <!-- Text Input for Emails -->
+        <div id="recipientTextDiv" class="mb-3">
+          <label for="recipientEmails" class="form-label"
+            >多筆請用 , 相隔</label
+          >
+          <input type="text" id="recipientEmails" class="form-control" />
+        </div>
+
+        <!-- CSV File Upload -->
+        <div id="recipientCsvDiv" class="mb-3" style="display: none">
+          <label for="recipientCsvFile" class="form-label">請上傳csv檔</label>
+          <input
+            type="file"
+            id="recipientCsvFile"
+            class="form-control"
+            accept=".csv"
+          />
+        </div>
+
+        <!-- Submit Button and Loading Spinner -->
+        <div id="submitContainer" class="d-flex align-items-center">
+          <button type="submit" id="sendEmailsBtn" class="btn btn-primary">
+            發送
+          </button>
+          <div
+            id="loadingSpinner"
+            class="spinner-border text-primary ms-3"
+            role="status"
+            style="display: none"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </form>
+
+      <div id="result" class="mt-3"></div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>

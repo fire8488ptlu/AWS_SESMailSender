@@ -30,3 +30,5 @@ npm run package
 ## Project Display
 
 ![Alt Text](README_info/Intro1.png)
+
+![Alt Text](README_info/Intro2.png)
